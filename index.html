@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARPAMATICS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+    <a href="#" class="brand">ARPAMATICS</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Explore</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    </header>
+    <!-- Header -->
+    <!-- Section -->
+    <section class="home">
+        <video class="video-slide active" src="./images/vdo1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./images/vedio1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./images/vedio2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./images/vedio3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./images/vdo1.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Wonderful. <br><span>Island</span></h1>
+            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>2nd. <br><span>Island</span></h1>
+            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>3rd. <br><span>Island</span></h1>
+            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>4th. <br><span>Island</span></h1>
+            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>5th. <br><span>Island</span></h1>
+            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <!-- Section -->
+    <!-- Script -->
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active")
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            })
+        }) 
+    </script>
+    <!-- Script -->
+</body>
+</html>
