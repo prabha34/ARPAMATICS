@@ -1,106 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARPAMATICS</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <!-- Header -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        /* Custom Styles */
+        .navbar {
+          background-color:  #112c66 ; /* Navbar background color */
+         
+        }
+  
+        .navbar-nav .nav-link {
+          color: #fff !important; /* White color for links */
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 10px 15px;
+          
+        }
+      
+        .navbar-nav .nav-link.dropdown-toggle:hover {
+         color: black !important; /* Change color on hover */
+         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Add shadow effect */
+    }
+  
+    /* Add hover effect for dropdown items */
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #112c66; /* Background change */
+      color: #ffcc00; /* Text color change */
+      font-weight: bold; /* Make it bold */
+    }
+          
+  
+        .dropdown-menu {
+          background-color: #112c66; /* Dropdown background color */
+        }
+  
+        .dropdown-menu .dropdown-item {
+          color: #fff!important;
+        }
+  
+        .dropdown-menu .dropdown-item:hover {
+          background-color: #112c66; /* Dropdown hover effect */
+        }
+  </style>
     <header>
-    <a href="#" class="brand">ARPAMATICS</a>
-    <div class="menu-btn"></div>
-    <div class="navigation">
-        <div class="navigation-items">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Explore</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+        <!--<a href="#" class="brand">ARPAMATICS</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <ul>
+                <li><a href="#">HOME</a></li>
+
+                <li class="dropdown">
+                    <a href="#">WED DEVELOPMENT</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Website Design</a></li>
+                        <li><a href="#">Backend Development</a></li>
+                        <li><a href="#">Front-end Development</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">DIGITAL MARKETING</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">PPC</a></li>
+                        <li><a href="#">Social Media</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">GRAPHIC DESIGNING</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Logo Design</a></li>
+                        <li><a href="#">Advertising</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">VIRTUAL TOUR</a></li>
+                <li><a href="#">DATA SOLUTIONS</a></li>
+                <li><a href="#">INDUSTRIES WE SERVED</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            </div>
+        </div>-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand text-white fw-bold" href="#">Arpmatics</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="webDevelopmentDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Web Development
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="webDevelopmentDropdown">
+                  <li><a class="dropdown-item" href="#">Website Designing</a></li>
+                  <li><a class="dropdown-item" href="#">WordPress Websites</a></li>
+                  <li><a class="dropdown-item" href="#">Commerce Websites</a></li>
+                  <li><a class="dropdown-item" href="#">CMS Website</a></li>
+                  <li><a class="dropdown-item" href="#">HTML Website</a></li>
+                  <li><a class="dropdown-item" href="#">Mobile App Development</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="digitalMarketingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Digital Marketing
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="digitalMarketingDropdown">
+                  <li><a class="dropdown-item" href="#">Search Engine Optimization</a></li>
+                  <li><a class="dropdown-item" href="#">Social Media Optimization</a></li>
+                  <li><a class="dropdown-item" href="#">Search Engine Marketing</a></li>
+                  <li><a class="dropdown-item" href="#">Content Writing</a></li>
+                  <li><a class="dropdown-item" href="#">SMS Marketing</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="graphicDesignDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Graphic Design
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="graphicDesignDropdown">
+                  <li><a class="dropdown-item" href="#">Logo Design</a></li>
+                  <li><a class="dropdown-item" href="#">Brochure Design</a></li>
+                  <li><a class="dropdown-item" href="#">Flyer Design</a></li>
+                  <li><a class="dropdown-item" href="#">Banner Design</a></li>
+                  <li><a class="dropdown-item" href="#">Business Card Design</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item dropdown">
+                  <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="graphicDesignDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Data Solutions
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="graphicDesignDropdown">
+                  <li><a class="dropdown-item" href="#">Data Intelligence</a></li>
+                  <li><a class="dropdown-item" href="#">Data profilling</a></li>
+                  <li><a class="dropdown-item" href="#">Market Research</a></li>
+                  <li><a class="dropdown-item" href="#">Lead Generation</a></li>
+                 
+                  </li>
+                </ul>
+              </li>  
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="graphicDesignDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Virtual Tour
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="graphicDesignDropdown">
+                  <li><a class="dropdown-item" href="#">Logo Design</a></li>
+                  <li><a class="dropdown-item" href="#">Brochure Design</a></li>
+                  <li><a class="dropdown-item" href="#">Flyer Design</a></li>
+                  <li><a class="dropdown-item" href="#">Banner Design</a></li>
+                  <li><a class="dropdown-item" href="#">Business Card Design</a>
+                  </li>
+                </ul>
+              </li>
+               
+              <li class="nav-item">
+                <a class="nav-link" href="#">Industries We Serve</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </nav>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </header>
     <!-- Header -->
     <!-- Section -->
     <section class="home">
-        <video class="video-slide active" src="./images/vdo1.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./images/vedio1.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./images/vedio2.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./images/vedio3.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./images/vdo1.mp4" autoplay muted loop></video>
-        <div class="content active">
-            <h1>Wonderful. <br><span>Island</span></h1>
-            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="content">
-            <h1>2nd. <br><span>Island</span></h1>
-            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="content">
-            <h1>3rd. <br><span>Island</span></h1>
-            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="content">
-            <h1>4th. <br><span>Island</span></h1>
-            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="content">
-            <h1>5th. <br><span>Island</span></h1>
-            <p>Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris adipisicing culpa non nostrud exercitation. Mollit do sunt elit incididunt eiusmod cillum commodo labore Lorem excepteur excepteur. Velit esse magna ipsum pariatur consectetur mollit labore est ex veniam laborum aute pariatur.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="slider-navigation">
-            <div class="nav-btn active"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-        </div>
+      <video
+        class="video-slide active"
+        src="./images/vdo1.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="./images/vedio1.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="./images/vedio2.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="./images/vedio3.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="./images/vdo1.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="content active">
+        <h1>GET MORE TRAFFIC<br /><span>ON YOUR WEBSITE</span></h1>
+        <p>
+          Development Services, 360&deg; Virtual Tour Photography ,SEO Services,
+          Web Desgining and Marketing Services
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>BUILDING DIGITAL RELATIONSHIPS<br /><span>AND REPUTATION</span></h1>
+        <p>
+          There are three objectives for Market Research, Enagement, Conversion
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>RESPONSIVE WEB DESIGN &<br /><span>DEVELOPMENT</span></h1>
+        <p>
+          Creating an outstanding website based on the most innovative concept
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>4th. <br /><span>Island</span></h1>
+        <p>
+          Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex
+          nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint
+          qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo
+          eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris
+          adipisicing culpa non nostrud exercitation. Mollit do sunt elit
+          incididunt eiusmod cillum commodo labore Lorem excepteur excepteur.
+          Velit esse magna ipsum pariatur consectetur mollit labore est ex
+          veniam laborum aute pariatur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>5th. <br /><span>Island</span></h1>
+        <p>
+          Laborum eiusmod id dolore fugiat nisi. Esse anim aliqua labore ex
+          nostrud occaecat. Incididunt non dolor sint magna tempor laborum sint
+          qui anim voluptate nostrud et fugiat ea. Culpa culpa veniam commodo
+          eiusmod excepteur. Deserunt eu fugiat reprehenderit commodo laboris
+          adipisicing culpa non nostrud exercitation. Mollit do sunt elit
+          incididunt eiusmod cillum commodo labore Lorem excepteur excepteur.
+          Velit esse magna ipsum pariatur consectetur mollit labore est ex
+          veniam laborum aute pariatur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
     </section>
     <!-- Section -->
     <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-        const menuBtn = document.querySelector(".menu-btn");
-        const navigation = document.querySelector(".navigation");
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
 
-        menuBtn.addEventListener("click", () => {
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
         });
 
-        const btns = document.querySelectorAll(".nav-btn");
-        const slides = document.querySelectorAll(".video-slide");
-        const contents = document.querySelectorAll(".content");
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
 
-        var sliderNav = function(manual) {
-            btns.forEach((btn) => {
-                btn.classList.remove("active")
-            });
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
 
-            slides.forEach((slide) => {
-                slide.classList.remove("active")
-            });
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      };
 
-            contents.forEach((content) => {
-                content.classList.remove("active")
-            });
-
-            btns[manual].classList.add("active");
-            slides[manual].classList.add("active");
-            contents[manual].classList.add("active");
-        }
-
-        btns.forEach((btn, i) => {
-            btn.addEventListener("click", () => {
-                sliderNav(i);
-            })
-        }) 
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
     </script>
     <!-- Script -->
-</body>
+  </body>
 </html>
